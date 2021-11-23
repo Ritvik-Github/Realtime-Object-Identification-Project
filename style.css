@@ -4,6 +4,7 @@
 }
 
 canvas{
+    margin-top: 150px;
     border-radius: 10px;
     border: 3px ridge grey;
 }
