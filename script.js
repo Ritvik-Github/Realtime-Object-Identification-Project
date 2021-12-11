@@ -1,12 +1,12 @@
 var img_src = "";
 status = "";
 object = [];
-function preload() {
-  img_src = loadImage("Glass.jpg");
-}
+function preload() {}
 function setup() {
   canvas = createCanvas(700, 700);
   canvas.center();
+  video = createCapture(VIDEO);
+  video.hide();
   var objectDetector = ml5.objectDetector("cocossd", modelLoaded);
   document.getElementById("status").innerHTML =
     "Model Loaded, Detecting Objects";
