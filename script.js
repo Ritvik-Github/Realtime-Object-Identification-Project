@@ -15,11 +15,11 @@ function setup() {
 function modelLoaded() {
   comsole.log("Model Has Been Loaded !");
   status = true;
-  objectDetector.detect(img_src, gotResults);
+  setTimeout(function(){objectDetector.detect(img_src, gotResults);},2000);
 }
 
 function draw() {
-  image(img_src, 0, 0, 700, 700);
+  image(video, 0, 0, 700, 700);
   if (status != "") {
     for (i = 0; i < object.length; i++) {
       document.getElementById("status").innerHTML =
